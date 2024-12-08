@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التحكم بالمصباح التكليف الثاني</title>
+    <style>
+        img {
+            width: 200px;
+        }
+      
+        body{
+            background: linear-gradient(to left, #422c4b, #2f294d);
+        }
+        button{
+            padding: 3px;
+            background-color: rgb(202, 202, 226);
+            margin-left: 20px;
+            color: #000000;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>التحكم بالمصباح </h1>
+    <img id="lightBulb" src="طافي.png" alt="Light Bulb">
+    <br>
+    <button onclick="On()"> on light</button>
+    <button onclick="Off()"> off light</button>
+
+    <script>
+        function On() {
+            document.getElementById("lightBulb").src = "والع.png";
+        }
+
+        function Off() {
+            document.getElementById("lightBulb").src = "طافي.png";
+        }
+    </script>
+        <h2>كيف كان شعورك </h2>
+        <button onclick="haveFun()"> عبر عن شعورك</button>
+    
+        <script>
+            function haveFun() {
+                const isFun = confirm("هل كانت تجربه ممتعه?");
+                if (isFun) {
+                    alert("نحن سعداء بسعادتك...");
+                } else {
+                    const reason = prompt("من فضلك اخبرنا عن عدم رضاك");
+                    if (reason) {
+                        alert(`السبب: ${reason}`);
+                    }
+                }
+            }
+        </script>
+</body>
+
+</html>
